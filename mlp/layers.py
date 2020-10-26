@@ -670,7 +670,7 @@ class DropoutLayer(StochasticLayer):
                 outputs = inputs * self.mask
             return outputs
         else:
-            return inputs
+            return inputs * self.incl_prob
 
     def bprop(self, inputs, outputs, grads_wrt_outputs):
         """Back propagates gradients through a layer.
