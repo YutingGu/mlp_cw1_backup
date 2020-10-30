@@ -674,7 +674,7 @@ class DropoutLayer(StochasticLayer):
 
     def bprop(self, inputs, outputs, grads_wrt_outputs):
         """Back propagates gradients through a layer.
-1q
+
         Given gradients with respect to the outputs of the layer calculates the
         gradients with respect to the layer inputs. This should correspond to
         default stochastic forward-propagation.
