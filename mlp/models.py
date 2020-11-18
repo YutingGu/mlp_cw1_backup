@@ -27,7 +27,11 @@ class SingleLayerModel(object):
         """A list of all of the parameters of the model."""
         return self.layer.params
 
+<<<<<<< HEAD
     def fprop(self, inputs):
+=======
+    def fprop(self, inputs, evaluation=False):
+>>>>>>> 226249b7aced1403b9e107cb361e1f4c41fa771d
         """Calculate the model outputs corresponding to a batch of inputs.
 
         Args:

@@ -29,7 +29,11 @@ class L1Penalty(object):
         Returns:
             Value of penalty term.
         """
+<<<<<<< HEAD
         raise NotImplementedError
+=======
+        return self.coefficient * abs(parameter).sum()
+>>>>>>> 226249b7aced1403b9e107cb361e1f4c41fa771d
 
     def grad(self, parameter):
         """Calculate the penalty gradient with respect to the parameter.
@@ -41,7 +45,11 @@ class L1Penalty(object):
             Value of penalty gradient with respect to parameter. This
             should be an array of the same shape as the parameter.
         """
+<<<<<<< HEAD
         raise NotImplementedError
+=======
+        return self.coefficient * np.sign(parameter)
+>>>>>>> 226249b7aced1403b9e107cb361e1f4c41fa771d
 
     def __repr__(self):
         return 'L1Penalty({0})'.format(self.coefficient)
@@ -72,7 +80,11 @@ class L2Penalty(object):
         Returns:
             Value of penalty term.
         """
+<<<<<<< HEAD
         raise NotImplementedError
+=======
+        return 0.5 * self.coefficient * (parameter ** 2).sum()
+>>>>>>> 226249b7aced1403b9e107cb361e1f4c41fa771d
 
     def grad(self, parameter):
         """Calculate the penalty gradient with respect to the parameter.
@@ -84,7 +96,14 @@ class L2Penalty(object):
             Value of penalty gradient with respect to parameter. This
             should be an array of the same shape as the parameter.
         """
+<<<<<<< HEAD
         raise NotImplementedError
 
     def __repr__(self):
         return 'L2Penalty({0})'.format(self.coefficient)
+=======
+        return self.coefficient * parameter
+
+    def __repr__(self):
+        return 'L2Penalty({0})'.format(self.coefficient)
+>>>>>>> 226249b7aced1403b9e107cb361e1f4c41fa771d

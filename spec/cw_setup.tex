@@ -34,7 +34,13 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{6pt plus 2pt minus 1pt}
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
+<<<<<<< HEAD
 \setcounter{secnumdepth}{2}
+=======
+
+\newcommand{\todo}[2]{{\textcolor{red}{\bf [#1] #2 }}\addcontentsline{toc}{subsubsection}{\textcolor{red}{[#1] #2} }}
+\newcommand{\notes}[1]{\textcolor{blue}{\it #1 }}
+>>>>>>> 226249b7aced1403b9e107cb361e1f4c41fa771d
 
 \DeclareMathOperator{\softmax}{softmax}
 \DeclareMathOperator{\sigmoid}{sigmoid}

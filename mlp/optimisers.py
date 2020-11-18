@@ -58,7 +58,11 @@ class Optimiser(object):
         parameters according to the learning rule.
         """
         with self.tqdm_progress(total=self.train_dataset.num_batches) as train_progress_bar:
+<<<<<<< HEAD
             train_progress_bar.set_description("Ep Prog")
+=======
+            train_progress_bar.set_description("Epoch Progress")
+>>>>>>> 226249b7aced1403b9e107cb361e1f4c41fa771d
             for inputs_batch, targets_batch in self.train_dataset:
                 activations = self.model.fprop(inputs_batch)
                 grads_wrt_outputs = self.error.grad(activations[-1], targets_batch)
@@ -112,7 +116,11 @@ class Optimiser(object):
         """
         logger.info('Epoch {0}: {1:.1f}s to complete\n    {2}'.format(
             epoch, epoch_time,
+<<<<<<< HEAD
             ', '.join(['{}={:.2e}'.format(k, v) for (k, v) in stats.items()])
+=======
+            ', '.join(['{0}={1:.2e}'.format(k, v) for (k, v) in stats.items()])
+>>>>>>> 226249b7aced1403b9e107cb361e1f4c41fa771d
         ))
 
     def train(self, num_epochs, stats_interval=5):
@@ -132,7 +140,11 @@ class Optimiser(object):
         start_train_time = time.time()
         run_stats = [list(self.get_epoch_stats().values())]
         with self.tqdm_progress(total=num_epochs) as progress_bar:
+<<<<<<< HEAD
             progress_bar.set_description("Exp Prog")
+=======
+            progress_bar.set_description("Experiment Progress")
+>>>>>>> 226249b7aced1403b9e107cb361e1f4c41fa771d
             for epoch in range(1, num_epochs + 1):
                 start_time = time.time()
                 self.do_training_epoch()
